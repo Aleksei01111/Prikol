@@ -211,5 +211,15 @@ namespace Prikol {
                 return ResourceManager.GetStream("topAudio7", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Walp {
+            get {
+                object obj = ResourceManager.GetObject("Walp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
