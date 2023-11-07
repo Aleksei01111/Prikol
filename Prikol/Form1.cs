@@ -16,5 +16,18 @@ namespace Prikol
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Bitmap[] images = new Bitmap[]
+            {
+                Resource1.zi9,
+                Resource1.i7,
+                Resource1.XBTU,
+                Resource1._1uhE,
+            };
+
+            pictureBox1.Image = images[new Random().Next(0, images.Length)];
+        }
     }
 }
