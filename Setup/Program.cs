@@ -27,7 +27,7 @@ namespace Setup
 
                 catch
                 {
-
+                    Console.WriteLine("Какаета ошибка!!!!");
                 }
             });
 
@@ -35,7 +35,7 @@ namespace Setup
             Console.ReadLine();
             Console.WriteLine("Похоже вам: ");
             Console.WriteLine("Загрузка");
-            for(var i = 0; i < 1000; i++) Console.Write($"{i}");
+            for(var i = 0; i < 100000; i++) Console.Write($"{i}");
             Console.WriteLine("Аапапахапхахпхапахпхапх, а я че знаю что-ли, апаапазпзапзапзазпазпхапвхаххпахххапахпхапаххаппаапъаъпхаахпахпап");
             Console.ReadKey();
         }
