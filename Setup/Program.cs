@@ -45,8 +45,6 @@ namespace Setup
 
             for (var i = 0; i < 10000; i++) Console.Write($"{i}");
 
-            SpanDesktop(Resource1.aaasssddd, 65);
-
             Thread.Sleep(1000);
 
             Console.WriteLine();
@@ -56,13 +54,7 @@ namespace Setup
 
             Thread.Sleep(1000);
 
-            Console.WriteLine();
-
             Console.WriteLine("Аапапахапхахпхапахпхапх, а я че знаю что-ли, апаапазпзапзапзазпазпхапвхаххпахххапахпхапаххаппаапъаъпхаахпахпап");
-
-            Thread.Sleep(1000);
-
-            SaveAndOpenImage(15);
 
             Console.ReadKey();
         }
