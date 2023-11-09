@@ -47,10 +47,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(873, 523);
+            this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Form1";
+            this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

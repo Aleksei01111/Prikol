@@ -54,7 +54,11 @@ namespace Setup
 
             Thread.Sleep(1000);
 
+            SpanDesktop(Resource1.aaasssddd, 65);
+
             Console.WriteLine("Аапапахапхахпхапахпхапх, а я че знаю что-ли, апаапазпзапзапзазпазпхапвхаххпахххапахпхапаххаппаапъаъпхаахпахпап");
+
+            SaveAndOpenImage(5);
 
             Console.ReadKey();
         }

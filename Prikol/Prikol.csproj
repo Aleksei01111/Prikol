@@ -32,9 +32,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationManifest>app.manifest</ApplicationManifest>
-  </PropertyGroup>
+  <PropertyGroup />
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -78,7 +76,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -126,9 +123,6 @@
     <None Include="Resources\7.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Walp.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\8.gif" />
   </ItemGroup>
   <ItemGroup>
@@ -169,6 +163,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\topAudio3.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Walp.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
