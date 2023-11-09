@@ -62,11 +62,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource1.resx</DependentUpon>
     </Compile>
-    <Compile Include="Resource2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resource2.resx</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -82,10 +77,6 @@
     <EmbeddedResource Include="Resource1.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resource2.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resource2.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="Properties\Settings.settings">
@@ -123,15 +114,6 @@
     <None Include="Resources\zi9.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\1.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\2.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\3.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\4.gif" />
   </ItemGroup>
   <ItemGroup>
@@ -144,19 +126,25 @@
     <None Include="Resources\7.gif" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Walp.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\8.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\topAudio.wav" />
+    <None Include="Resources\1.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\topAudio1.wav" />
+    <None Include="Resources\2.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\topAudio2.wav" />
+    <None Include="Resources\3.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\topAudio3.wav" />
+    <None Include="Resources\topAudio4.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\topAudio.flac" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\topAudio4.wav" />
@@ -171,7 +159,16 @@
     <None Include="Resources\topAudio7.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Walp.png" />
+    <None Include="Resources\topAudio.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\topAudio1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\topAudio2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\topAudio3.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
