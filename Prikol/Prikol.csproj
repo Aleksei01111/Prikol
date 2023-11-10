@@ -90,27 +90,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Walp.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\3QeI.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\i7.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\XBTU.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Jun.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\1uhE.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\zi9.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\4.gif" />
   </ItemGroup>
   <ItemGroup>
@@ -133,12 +112,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\3.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\topAudio4.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\topAudio.flac" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\topAudio4.wav" />

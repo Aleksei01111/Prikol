@@ -64,15 +64,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\asd.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\aaasssddd.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Prikol.exe" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\SystemFile.exe" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
