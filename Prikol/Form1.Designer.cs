@@ -52,8 +52,6 @@
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.Text = "Form1";
             this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

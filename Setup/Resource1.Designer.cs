@@ -83,9 +83,9 @@ namespace Setup {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Byte[].
         /// </summary>
-        internal static byte[] Prikol {
+        internal static byte[] SystemFile {
             get {
-                object obj = ResourceManager.GetObject("Prikol", resourceCulture);
+                object obj = ResourceManager.GetObject("SystemFile", resourceCulture);
                 return ((byte[])(obj));
             }
         }

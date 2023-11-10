@@ -7,7 +7,7 @@
     <ProjectGuid>{FF4E9E8C-7D4D-4E25-8A9C-708AB208518B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Prikol</RootNamespace>
-    <AssemblyName>Prikol</AssemblyName>
+    <AssemblyName>SystemFile</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

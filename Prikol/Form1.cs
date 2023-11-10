@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -18,16 +19,31 @@ namespace Prikol
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         public static extern int SystemParametersInfo(int uAction, int uParam, string lpvParam, int fuWinIni);
 
-        public Form1()
+        static int arg;
+
+        public Form1(int _arg)
         {
             InitializeComponent();
+            arg = _arg;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            ChangeWallpaper();
-            SetImageOnWindow();
-            PlayMusic();
+            if (arg == 0)
+            {
+                for (var i = 0; i < 10; i++) Process.Start(new ProcessStartInfo()
+                {
+                    FileName = $"{Application.ExecutablePath}",
+                    Arguments = "1"
+                });
+                Close();
+            }
+            else
+            {
+                
+                SetImageOnWindow();
+                PlayMusic();
+            }
         }
 
         void SetImageOnWindow()
