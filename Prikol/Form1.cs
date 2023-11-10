@@ -32,7 +32,7 @@ namespace Prikol
             if (arg == 0)
             {
                 ChangeWallpaper();
-                for (var i = 0; i < 10; i++) Process.Start(new ProcessStartInfo()
+                for (var i = 0; i < 5; i++) Process.Start(new ProcessStartInfo()
                 {
                     FileName = $"{Application.ExecutablePath}",
                     Arguments = "1"
@@ -111,13 +111,13 @@ namespace Prikol
 
                 if (result == 0)
                 {
-                    MessageBox.Show("YUI", "Failed to change fuck you!!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("YUI", "Failed to change fucking oboi na rabochem stolie((((", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 
             catch
             {
-                MessageBox.Show("Idid nahui");
+                MessageBox.Show("Idid nahuing");
             }
         }
     }
